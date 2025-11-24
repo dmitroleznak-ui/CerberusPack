@@ -1,0 +1,35 @@
+{
+    "clanName": "Cerberus Pack",
+    "clanTag": "CP",
+    "discord": {
+        "link": "https://yourdiscordlink.com/invite/CP",
+        "ctaText": "ПРИЄДНАТИСЯ ДО ЗГРАЇ (Discord)"
+    },
+    "leadership": {
+        "leader": {
+            "nickname": "Alpha_Cerberus",
+            "roleTitle": "Головний Командир Cerberus Pack",
+            "description": "Три голови. Єдиний фронт. Відповідає за стратегічне планування та міжкланові відносини."
+        },
+        "deputy": {
+            "nickname": "Beta_Fire",
+            "roleTitle": "Оперативний Командир",
+            "description": "Керує внутрішніми операціями, тренуваннями та дотриманням внутрішніх правил. Наше полум'я в бою."
+        },
+        "warden": {
+            "nickname": "Warden_Gray",
+            "roleTitle": "Представник Клану (Рекрутинг)",
+            "description": "Відповідає за прийом нових членів, зв'язок зі спільнотою Squad та організацію івентів."
+        }
+    },
+    "socialLinks": [
+        {
+            "name": "Steam Group",
+            "url": "https://steamcommunity.com/groups/CerberusPack"
+        },
+        {
+            "name": "YouTube Channel",
+            "url": "https://youtube.com/CerberusPackSquad"
+        }
+    ]
+}

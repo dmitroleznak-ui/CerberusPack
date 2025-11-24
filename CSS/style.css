@@ -1,0 +1,375 @@
+/* --- ОСНОВНІ СТИЛІ ТА ФОН --- */
+:root {
+    --color-dark-bg: #111111; /* Темний фон */
+    --color-text-light: #f5f5f5; /* Світлий текст */
+    --color-flame-red: #c93305; /* Червоний акцент (Вогонь) */
+    --color-flame-orange: #ff7f0e; /* Помаранчевий акцент (Вогонь) */
+    --color-wolf-gray: #aaaaaa; /* Сірий для вовків/тексту */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* --- ШАПКА (HEADER) --- */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-flame-red);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.clan-emblem {
+    height: 60px; /* Звичайний розмір */
+    margin-right: 20px;
+}
+
+.small-emblem {
+    height: 40px; /* Менший розмір на інших сторінках */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-wolf-gray);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    color: var(--color-flame-orange);
+    border-bottom: 2px solid var(--color-flame-red);
+}
+
+.nav-button {
+    background-color: var(--color-flame-red);
+    color: var(--color-text-light) !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border-bottom: none !important;
+}
+
+.nav-button:hover {
+    background-color: var(--color-flame-orange);
+}
+
+/* --- ГОЛОВНА СТОРІНКА (HOME) --- */
+.home-hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Використовуємо емблему як великий фон (за потреби) */
+    background: url('photo_2025-07-20_00-46-08.jpg') no-repeat center center;
+    background-size: cover; /* Або 'contain' якщо хочете бачити всю емблему */
+    position: relative;
+    /* Накладання темного кольору для кращої читабельності тексту */
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75); 
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    color: var(--color-flame-orange);
+    text-shadow: 0 0 10px var(--color-flame-red);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    color: var(--color-wolf-gray);
+    margin-bottom: 30px;
+}
+
+.slogan {
+    color: var(--color-flame-red) !important;
+    font-style: italic;
+    font-size: 1.2em !important;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-flame-red);
+    color: var(--color-text-light);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); /* Ефект вогню */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: 2px solid var(--color-flame-orange);
+}
+
+.cta-button:hover {
+    background-color: var(--color-flame-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--color-flame-red);
+}
+
+/* --- СТОРІНКА ЛІДЕРСТВА (LEADERSHIP) --- */
+.leadership-page {
+    padding: 40px 5%;
+}
+
+.leadership-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-flame-orange);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    border-bottom: 2px solid var(--color-flame-red);
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+}
+
+.member-card {
+    background-color: #1e1e1e;
+    border: 2px solid var(--color-wolf-gray);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-flame-red);
+}
+
+.member-card.leader {
+    border-color: var(--color-flame-orange);
+    background-color: #282828;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.member-card h3 {
+    color: var(--color-flame-red);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.member-card.leader h3 {
+    color: var(--color-flame-orange);
+    font-size: 1.8em;
+}
+
+.role-title {
+    color: var(--color-wolf-gray);
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.member-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.4em;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.description {
+    color: var(--color-wolf-gray);
+}
+
+.representatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.note {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--color-flame-red);
+    font-style: italic;
+}
+
+/* --- СТИЛІ ДЛЯ SQUAD PAGE --- */
+.squad-page {
+    padding: 40px 5%;
+}
+
+.squad-info {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    border-bottom: 2px solid var(--color-wolf-gray);
+    padding-bottom: 30px;
+}
+
+.squad-info h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-flame-orange);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.squad-info p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: var(--color-wolf-gray);
+}
+
+.squad-info ul {
+    list-style: none;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+}
+
+.squad-info li {
+    background: #1e1e1e;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 4px solid var(--color-flame-red);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.squad-info li strong {
+    color: var(--color-flame-orange);
+}
+
+.game-link-button {
+    display: inline-block;
+    background-color: var(--color-wolf-gray);
+    color: var(--color-dark-bg);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.game-link-button:hover {
+    background-color: var(--color-flame-red);
+    color: var(--color-text-light);
+}
+
+
+/* --- СТИЛІ ДЛЯ ГАЛЕРЕЇ --- */
+.gallery-section {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.gallery-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-flame-red);
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.gallery-description {
+    color: var(--color-wolf-gray);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background-color: #282828;
+    border: 1px solid var(--color-flame-orange);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 0 15px var(--color-flame-red);
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* Фіксована висота для однорідності */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item iframe {
+    height: 250px; /* Фіксована висота для однорідності відео */
+}
+
+.caption {
+    padding: 10px;
+    color: var(--color-text-light);
+    background-color: #1e1e1e;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.gallery-note {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--color-flame-orange);
+    font-style: italic;
+}
+
+/* --- ПІДВАЛ (FOOTER) --- */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: var(--color-wolf-gray);
+    border-top: 1px solid var(--color-flame-red);
+    margin-top: 40px;
+}
