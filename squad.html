@@ -6,6 +6,38 @@
     <title>Squad & Галерея | Cerberus Pack</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Додатковий стиль, щоб картинка відео виглядала як кнопка */
+        .video-link {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .video-link:hover {
+            opacity: 0.8;
+        }
+        /* Імітація кнопки Play поверх картинки (опціонально) */
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 40px;
+            background-color: rgba(33, 33, 33, 0.8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-icon::after {
+            content: "";
+            border-style: solid;
+            border-width: 10px 0 10px 20px;
+            border-color: transparent transparent transparent white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,7 +47,8 @@
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
-                <li><a href="squad.html">Squad & Галерея</a></li> <li><a href="leadership.html">Лідерство</a></li>
+                <li><a href="squad.html">Squad & Галерея</a></li> 
+                <li><a href="leadership.html">Лідерство</a></li>
                 <li><a href="https://discord.gg/KUTjmaTq" target="_blank" class="nav-button">Discord</a></li>
             </ul>
         </nav>
@@ -26,9 +59,9 @@
             <h2>🔥 Наше Поле Бою: Гра SQUAD 🔥</h2>
             <p>Squad — це командний тактичний шутер від першої особи, що акцентує увагу на комунікації, координації та реалістичному військовому досвіді. У Cerberus Pack ми цінуємо: </p>
             <ul>
-                <li>**Координацію:** Чітка комунікація та виконання наказів.</li>
-                <li>**Командну Роботу:** Дії як єдиний механізм, де кожен гравець важливий.</li>
-                <li>**Професіоналізм:** Навчання та вдосконалення тактичних навичок.</li>
+                <li><strong>Координація:</strong> Чітка комунікація та виконання наказів.</li>
+                <li><strong>Командна Робота:</strong> Дії як єдиний механізм, де кожен гравець важливий.</li>
+                <li><strong>Професіоналізм:</strong> Навчання та вдосконалення тактичних навичок.</li>
             </ul>
             <a href="https://store.steampowered.com/app/393380/Squad/" target="_blank" class="game-link-button">
                 Дізнатися більше про Squad у Steam
@@ -44,33 +77,24 @@
                     <img src="screenshot1.jpg" alt="Скріншот моменту з гри 1">
                     <div class="caption">Штурм об'єкта під вогнем</div>
                 </div>
+
                 <div class="gallery-item image-item">
                     <img src="screenshot2.jpg" alt="Скріншот моменту з гри 2">
                     <div class="caption">Ідеальний артилерійський удар</div>
                 </div>
                 
                 <div class="gallery-item video-item">
-                    <iframe 
-                        width="100%" 
-                        height="auto" 
-                        src="https://img.youtube.com/vi/Ctealk1bHI8&t=138s/0.jpg" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                    ></iframe>
-                    <div class="caption">Акт 1. Знайомство із Cerberus Pack"</div>
+                    <a href="https://youtu.be/Ctealk1bHI8?t=138" target="_blank" class="video-link">
+                        <img src="https://img.youtube.com/vi/Ctealk1bHI8/maxresdefault.jpg" alt="Дивитись відео на YouTube" style="width: 100%; height: auto;">
+                        <div class="play-icon"></div> </a>
+                    <div class="caption">Акт 1. Знайомство із "Cerberus Pack"</div>
                 </div>
+
                 <div class="gallery-item video-item">
-                    <iframe 
-                        width="100%" 
-                        height="auto" 
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                    ></iframe>
+                    <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2" target="_blank" class="video-link">
+                        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_2/hqdefault.jpg" alt="Відео ще не додано" style="width: 100%; height: auto;">
+                        <div class="play-icon"></div>
+                    </a>
                     <div class="caption">Командна робота: Squad Leader View</div>
                 </div>
             </div>
@@ -83,7 +107,6 @@
         <p>&copy; 2025 Cerberus Pack. Всі права захищено.</p>
     </footer>
 </body>
-
 </html>
 
 
