@@ -106,4 +106,56 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('leadership-page-body')) {
         populateLeadership(); // Виконується тільки на сторінці лідерства
     }
+
+});
+// --- НОВА ФУНКЦІЯ: Відображення списку учасників ---
+async function populateRoster() {
+    const rosterContainer = document.getElementById('member-roster');
+    const countElement = document.getElementById('member-count');
+    
+    // Функція для завантаження нового JSON
+    async function loadRoster() {
+        try {
+            const response = await fetch('members.json');
+            if (!response.ok) {
+                throw new Error(`Помилка HTTP: ${response.status}`);
+            }
+            return await response.json();
+        } catch (error) {
+            console.error("Не вдалося завантажити members.json:", error);
+            rosterContainer.innerHTML = '<tr><td colspan="3" style="color:#c93305;">Помилка завантаження списку.</td></tr>';
+            return null;
+        }
+    }
+
+    const rosterData = await loadRoster();
+    if (!rosterData || !rosterData.memberList) return;
+
+    // Оновлення загальної кількості
+    countElement.textContent = rosterData.totalMembers;
+
+    // Генерація рядків таблиці
+    let htmlContent = '';
+    rosterData.memberList.forEach(member => {
+        htmlContent += `
+            <tr>
+                <td>${member.nickname}</td>
+                <td>${member.role}</td>
+                <td>${member.joinDate}</td>
+            </tr>
+        `;
+    });
+    
+    rosterContainer.innerHTML = htmlContent;
+}
+
+
+// --- Оновлення Основного Запуску в app.js ---
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (залишити updateDiscordLinks та populateLeadership) ...
+
+    // НОВИЙ БЛОК: Запуск функції для ростеру
+    if (document.body.classList.contains('roster-page-body')) {
+        populateRoster();
+    }
 });
