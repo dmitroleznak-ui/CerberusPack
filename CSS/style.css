@@ -1,4 +1,4 @@
-/* --- ОСНОВНІ СТИЛІ ТА ФОН --- */
+                                                                                                  /* --- ОСНОВНІ СТИЛІ ТА ФОН --- */
 :root {
     --color-dark-bg: #111111; /* Темний фон */
     --color-text-light: #f5f5f5; /* Світлий текст */
@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- ШАПКА (HEADER) --- */
+                                                                                                    /* --- ШАПКА (HEADER) --- */
 header {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 5%;
@@ -75,7 +75,7 @@ nav a:hover {
     background-color: var(--color-flame-orange);
 }
 
-/* --- ГОЛОВНА СТОРІНКА (HOME) --- */
+                                                                                                 /* --- ГОЛОВНА СТОРІНКА (HOME) --- */
 .home-hero {
     min-height: 90vh;
     display: flex;
@@ -148,7 +148,7 @@ nav a:hover {
     box-shadow: 0 0 20px var(--color-flame-red);
 }
 
-/* --- СТОРІНКА ЛІДЕРСТВА (LEADERSHIP) --- */
+                                                                                                          /* --- СТОРІНКА ЛІДЕРСТВА (LEADERSHIP) --- */
 .leadership-page {
     padding: 40px 5%;
 }
@@ -234,7 +234,7 @@ nav a:hover {
     font-style: italic;
 }
 
-/* --- СТИЛІ ДЛЯ SQUAD PAGE --- */
+                                                                                                    /* --- СТИЛІ ДЛЯ SQUAD PAGE --- */
 .squad-page {
     padding: 40px 5%;
 }
@@ -297,7 +297,7 @@ nav a:hover {
 }
 
 
-/* --- СТИЛІ ДЛЯ ГАЛЕРЕЇ --- */
+                                                                                                             /* --- СТИЛІ ДЛЯ ГАЛЕРЕЇ --- */
 .gallery-section {
     text-align: center;
     padding: 30px 0;
@@ -364,7 +364,7 @@ nav a:hover {
     font-style: italic;
 }
 
-/* --- ПІДВАЛ (FOOTER) --- */
+                                                                                                          /* --- ПІДВАЛ (FOOTER) --- */
 footer {
     background-color: #000;
     padding: 20px;
@@ -372,4 +372,75 @@ footer {
     color: var(--color-wolf-gray);
     border-top: 1px solid var(--color-flame-red);
     margin-top: 40px;
+
+}
+
+                                                                                                     /* --- СТИЛІ ДЛЯ СТОРІНКИ РОСТЕРУ --- */
+.roster-page {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.roster-page h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-flame-orange);
+    margin-bottom: 20px;
+}
+
+.total-count {
+    font-size: 1.2em;
+    color: var(--color-wolf-gray);
+    margin-bottom: 30px;
+}
+
+#member-count {
+    font-weight: 800;
+    color: var(--color-flame-red);
+}
+
+.roster-table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto; /* Дозволяє прокручування на мобільних */
+}
+
+.roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.roster-table thead th {
+    background-color: var(--color-flame-red);
+    color: var(--color-text-light);
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.roster-table tbody tr {
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s;
+}
+
+.roster-table tbody tr:hover {
+    background-color: #222;
+}
+
+.roster-table tbody td {
+    padding: 12px 15px;
+    text-align: left;
+    color: var(--color-wolf-gray);
+}
+
+.roster-table tbody tr:nth-child(even) {
+    background-color: #1e1e1e; /* Чергування кольорів рядків */
+}
+
+/* Виділення ролі лідера */
+.roster-table tbody td:nth-child(2):contains("Лідер") {
+    color: var(--color-flame-orange);
+    font-weight: 700;
 }
