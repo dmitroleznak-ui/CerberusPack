@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список Учасників | Cerberus Pack</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body class="roster-page-body">
+    <header>
+        <div class="logo-container">
+            <img src="img/photo_2025-07-20_00-46-08.jpg" alt="Емблема клану Cerberus Pack" class="clan-emblem small-emblem">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="squad.html">Squad & Галерея</a></li>
+                <li><a href="leadership.html">Лідерство</a></li>
+                <li><a href="roster.html">Склад</a></li> <li><a href="https://discord.gg/KUTjmaTq" target="_blank" class="nav-button">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="roster-page">
+        <section class="roster-content">
+            <h2>👥 Офіційний Склад Cerberus Pack (CP) </h2>
+            <p class="total-count">Всього учасників: <span id="member-count">...</span></p>
+
+            <div class="roster-table-container">
+                <table class="roster-table">
+                    <thead>
+                        <tr>
+                            <th>Нікнейм</th>
+                            <th>Роль у клані</th>
+                            <th>Дата вступу</th>
+                        </tr>
+                    </thead>
+                    <tbody id="member-roster">
+                        <tr><td colspan="3">Завантаження списку...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cerberus Pack. Всі права захищено.</p>
+    </footer>
+    <script src="js/app.js"></script> 
+</body>
+</html>
