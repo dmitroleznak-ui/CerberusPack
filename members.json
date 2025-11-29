@@ -1,0 +1,126 @@
+{
+    "totalMembers": 25,
+    "memberList": [
+        {
+            "id": 1001,
+            "nickname": "Zuba",
+            "role": "Лідер",
+            "joinDate": "2025-06-10"
+        },
+        {
+            "id": 1002,
+            "nickname": "Fashion_Demon",
+            "role": "Представник",
+            "joinDate": "2025-06-10"
+        },
+        {
+            "id": 1003,
+            "nickname": "Landa",
+            "role": "Представник",
+            "joinDate": "2025-06-10"
+        },
+        {
+            "id": 1004,
+            "nickname": "Каптурик",
+            "role": "Ветеран",
+            "joinDate": "2025-06-10"
+        },
+        {
+            "id": 1005,
+            "nickname": "zhaba",
+            "role": "Ветеран",
+            "joinDate": "2025-06-10"
+        },
+        {
+            "id": 1006,
+            "nickname": "Штирлиц",
+            "role": "Ветеран",
+            "joinDate": "2025-06-10"
+        },
+        {
+            "id": 1007,
+            "nickname": "Пацюк",
+            "role": "SL(Squad Leader)",
+            "joinDate": "2025-06-10"
+        },
+        {
+            "id": 1008,
+            "nickname": "ganster",
+            "role": "Admin",
+            "joinDate": "2025-06-10"
+        }, 
+        {
+           "id": 1009,
+            "nickname": "Хмурый",
+            "role": "SL(Squad Leader)",
+            "joinDate": "2025-06-10"
+        },
+        {
+           "id": 1010,
+            "nickname": "PHOTOGRAPHER",
+            "role": "SL(Squad Leader)",
+            "joinDate": "2025-06-10"
+        },
+        {
+           "id": 1011,
+            "nickname": "Frost",
+            "role": "Ветеран",
+            "joinDate": "2025-06-10"
+        },
+        {
+           "id": 1012,
+            "nickname": "Jekos",
+            "role": "Soldier",
+            "joinDate": "2025-06-11"
+        },
+        {
+           "id": 1013,
+            "nickname": "Rosyk",
+            "role": "Soldier",
+            "joinDate": "2025-06-11"
+        },
+        {
+           "id": 1014,
+            "nickname": "Strela",
+            "role": "Ветеран",
+            "joinDate": "2025-06-12"
+        },
+        {
+           "id": 1015,
+            "nickname": "Чайка Ужаса",
+            "role": "Commander",
+            "joinDate": "2025-06-13"
+        },
+        {
+           "id": 1016,
+            "nickname": "Вовкулака",
+            "role": "Основа",
+            "joinDate": "2025-06-14"
+        },
+        {
+           "id": 1017,
+            "nickname": "мав",
+            "role": "Soldier",
+            "joinDate": "2025-06-14"
+        },
+        {
+           "id": 1018,
+            "nickname": "Yung Meep",
+            "role": "Soldier",
+            "joinDate": "2025-06-21"
+        },
+        {
+           "id": 1019,
+            "nickname": "Frreqqq",
+            "role": "Основа",
+            "joinDate": "2025-06-27"
+        },
+        {
+            "id": 1019,
+            "nickname": "Prikolnnooo",
+            "role": "Основа",
+            "joinDate": "2025-06-27"
+        },
+        
+    ]
+}
